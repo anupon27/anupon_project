@@ -1,5 +1,9 @@
-const routerpost = express.Router();
-const validateAccount = require('../ValiDataAcc/index');
+
+//Mark ไว้ก่อนว่ากุติดบัคคคคตรงนี้แหละแม่ง
+
+const express = require('express')
+const routerpost = express.Router()
+const validateAccount = require('../ValiDataAcc/ValiDataAcc/index')
 
 module.exports = (connection) => {
     routerpost.post('/Accounts', async (req, res) => {
