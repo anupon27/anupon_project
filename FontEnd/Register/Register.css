@@ -1,0 +1,109 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* พื้นหลัง */
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#4facfe,#00f2fe);
+}
+
+/* กล่องฟอร์ม */
+.wrapper{
+    width: 400px;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* หัวข้อ */
+.wrapper h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.wrapper h2{
+    text-align: center;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 18px;
+}
+
+/* กล่อง input */
+.input-box{
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* label */
+.input-box label{
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* input */
+.input-box input{
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+/* ตอนคลิก */
+.input-box input:focus{
+    border-color: #4facfe;
+    outline: none;
+    box-shadow: 0 0 5px rgba(79,172,254,0.5);
+}
+
+/* error */
+.error{
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+/* ปุ่ม */
+.btn{
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #4facfe;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* hover ปุ่ม */
+.btn:hover{
+    background: #2f8fff;
+    transform: scale(1.03);
+}
+
+/* ลิงก์ด้านล่าง */
+.back{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.back a{
+    text-decoration: none;
+    color: #4facfe;
+    font-weight: bold;
+}
+
+.back a:hover{
+    text-decoration: underline;
+}
