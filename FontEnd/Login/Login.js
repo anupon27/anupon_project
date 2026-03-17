@@ -1,43 +1,32 @@
 
-const loginForm = document.getElementById("login-form");
-const username = document.getElementById("username");
-const password = document.getElementById("password");
+    const loginForm = document.getElementById("loginForm");
+    const registerForm = document.getElementById("registerForm");
+    const toggleBtns = document.querySelectorAll(".toggle-btn");
 
-loginForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    checkInput();
-});
-
-function checkInput() {
-    const usernameValue = username.value.trim();
-    const passwordValue = password.value.trim();
-
-    if (usernameValue === "") {
-        setErrorFor(username, "กรุณากรอกชื่อผู้ใช้");
-    } else {
-        setSuccessFor(username);
+    function showLogin() {
+      loginForm.classList.add("active");
+      registerForm.classList.remove("active");
+      toggleBtns[0].classList.add("active");
+      toggleBtns[1].classList.remove("active");
     }
 
-    if (passwordValue === "") {
-        setErrorFor(password, "กรุณากรอกรหัสผ่าน");
-    } else {
-        setSuccessFor(password);
+    function showRegister() {
+      registerForm.classList.add("active");
+      loginForm.classList.remove("active");
+      toggleBtns[1].classList.add("active");
+      toggleBtns[0].classList.remove("active");
     }
 
-}
-function setErrorFor(input, message) {
-    const inputBox = input.parentElement;
-    const errorDisplay = inputBox.querySelector(".error");
+    function registerUser() {
+      let email = document.getElementById("regEmail").value;
+      let password = document.getElementById("regPassword").value;
 
-    errorDisplay.innerText = message;
-    inputBox.classList.add("error");
-
-}
-function setSuccessFor(input) {
-    const inputBox = input.parentElement;
-    const errorDisplay = inputBox.querySelector(".error");
-
-    errorDisplay.innerText = "";
-    inputBox.classList.remove("error");
-    inputBox.classList.add("success");
-}
+      if(email && password) {
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("userPassword", password);
+        alert("Sucess to login! Pls join with us");
+        showLogin();
+      } else {
+        alert("กรุณากรอกข้อมูลให้ครบถ้วน");
+      }
+    }

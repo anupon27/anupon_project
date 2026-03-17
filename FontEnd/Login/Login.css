@@ -1,74 +1,101 @@
-*{
-    magin: 0;
-    padding: 0;
-    box-sizing: bordor-box;
-
-}
-body{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
-.wrapper{
-    text-align: center;
-    width: 500px;
-    height: min-content;
-    padding: 50px;
-    border-radius: 15px;
-    background: #ffff;
+body {
+  background: #0f0f0f;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
-.input-box{
-    margin: 15px;
+/* กล่องหลัก */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.input-box label{
-display:block;
-margin: bottom 5px;
-font-weight: bold;
+/* ฟอร์มอยู่กลาง */
+.form-side {
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 20px;
+  width: 350px;
+  box-shadow: 0 0 30px rgba(0, 255, 204, 0.15);
 }
 
-.input-box input{
-    width: 80%;
-    padding:10px;
-    border-radius: 10px;
-    border:1px solid #ccc;
-    display: block;
-    margin: auto;
+/* ปุ่มสลับ */
+.btn-box {
+  display: flex;
+  margin-bottom: 25px;
+  background: #111;
+  border-radius: 30px;
+  overflow: hidden;
 }
 
-.input-box.error input{
-    border-color:red;
+.toggle-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: #aaa;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.input-box .error{
-    color: red;
-    font-size: 12px;
+.toggle-btn.active {
+  background: #00ffcc;
+  color: #000;
+  font-weight: bold;
 }
 
-.btn{
-    width: 80%;
-    margin: auto;
-    display: block;
-    padding: 10px;
-    border-radius: 10px;
+/* form */
+form {
+  display: none;
+  flex-direction: column;
 }
 
-.register-link{
-    display: inline-block;
-    margin-left: 5px;
-    padding: 5px 10px;
-    border-radius: 6px;
-    background: #4a6cf7;
-    color: white;
-    text-decoration: none;
-    font-size: 13px;
+form.active {
+  display: flex;
 }
 
-.register-link:hover{
-    background: #2c3e90;
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
+/* input */
+form input {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #2a2a2a;
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+
+form input:focus {
+  border: 1px solid #00ffcc;
+}
+
+/* ปุ่ม */
+form input[type="button"] {
+  background: #00ffcc;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form input[type="button"]:hover {
+  background: #00ccaa;
+}
